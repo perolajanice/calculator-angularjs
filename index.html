@@ -1,0 +1,54 @@
+<!-- index.html -->
+
+    <html ng-app="myApp">
+    <head>
+      <!-- SCROLLS -->
+      <!-- load bootstrap and fontawesome via CDN -->
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+      <link rel="stylesheet" href="index.css" type="text/css">
+      <!-- SPELLS -->
+      <!-- load angular and angular route via CDN -->
+
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js" ></script>
+
+      <script src="app.js"></script>
+
+    </head>
+<body ng-controller="mainController">
+<div class="container" align="center">
+<h1> {{ title }} </h1>
+
+<p> {{ words }} </p>
+
+<form name="numberBox" ng-submit="makeCalculations()">
+<div align="center">
+
+<input type="number" ng-model="a" required placeholder="Enter a number">
+<input type="number" ng-model="b" required placeholder="Enter a number">
+<h4> {{ result }} </h4>
+</div>
+
+<br>
+
+<div align="center" >
+<button ng-click="makeCalculations('add')" > + </button>
+<button ng-click="makeCalculations('minus')" > - </button>
+<button ng-click="makeCalculations('times')" > * </button>
+<button ng-click="makeCalculations('divide')" > / </button>
+<button ng-click="clear()"> clear </button>
+
+</div>
+
+</form>
+
+
+
+
+
+</div>
+    </body>
+    </html>
